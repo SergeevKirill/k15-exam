@@ -1,0 +1,750 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+@font-face
+	font-family: 'EuropeExt'
+	src: url('../fonts/EuropeExtNormal.otf')
+	font-weight: normal
+	font-style: normal
+
+@font-face
+	font-family: 'EuropeExtBold'
+	src: url('../fonts/EuropeExtBold.otf')
+	font-weight: normal
+	font-style: normal
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+header
+	background-color: #01983b
+	background-image: url('../img/pattern.png')
+	height: 76px
+	width: 100%
+
+.head
+	height: 76px
+
+.centered-content-980
+	width: 980px
+	margin: 0 auto
+
+.centered-content-1225
+	width: 1225px
+	margin: 0 auto
+
+.menu
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .menu-item
+    display: flex
+    padding: 23px 0
+    a
+      font-family: Arial, serif
+      font-size: 16px
+      text-transform: uppercase
+      text-decoration: none
+      color: #fff
+      &:hover
+        color: #2c2783
+      &:active
+        color: #282828
+
+.menu-focus
+  border-top: 2px solid #fff
+  border-bottom: 2px solid #fff
+  &:hover
+    border-top: 2px solid #2c2783
+    border-bottom: 2px solid #2c2783
+  &:active
+    border-top: 2px solid #282828
+    border-bottom: 2px solid #282828
+
+.slider-section
+	width: 100%
+	height: 720px
+	background-image: url(../img/slider-section-bg.png)
+	background-position: center
+	background-repeat: no-repeat
+
+.slider-top
+	height: 139px
+	display: flex
+	.image-space
+		width: 560px
+		height: 139px
+		display: flex
+		align-items: center
+		img
+			width: 398px
+			height: 56px
+	.description-space
+		width: 420px
+		.social-media-space
+			width: 420px
+			display: flex
+			height: 55px
+			align-items: flex-end
+			justify-content: flex-end
+			.social-media
+				height: 21px
+				width: 224px
+				display: flex
+				align-items: center
+				justify-content: space-between
+				.social-media-link-space-in
+					height: 21px
+					width: 21px
+					background-image: url(../img/inst-sprite.png)
+					display: flex
+					background-position: -1px -1px
+					&:hover
+						background-position: -23px -1px
+					&:active
+						background-position: -45px -1px
+				.social-media-link-space-vk
+					height: 21px
+					width: 21px
+					display: flex
+					background-image: url(../img/vk-sprite.png)
+					background-position: -1px -1px
+					&:hover
+						background-position: -23px -1px
+					&:active
+						background-position: -45px -1px
+				p
+					margin: 0
+					text-transform: uppercase
+					font-family: Arial, serif
+					font-size: 12px
+					color: #01983b
+	.contacts
+		height: 79px
+		width: 420px
+		display: flex
+		justify-content: flex-end
+		.info
+			width: 420px
+			height: 84px
+			a
+				text-decoration: none
+				font-size: 16px
+				color: #2c2783
+				margin: 0
+				line-height: -10px
+				&:hover
+					text-decoration: underline
+				&:active
+					color: #000
+			form
+				display: flex
+				justify-content: center
+				input[type="search"]
+					height: 19px
+					border-left: none
+					border-right: none
+					border-top: none
+					border-bottom: 1px solid
+					outline: none
+					width: 390px
+				input[type="submit"]
+					height: 19px
+					width: 19px
+					background-image: url(../img/search.jpg)
+					border: none
+
+
+.line-break
+	width: 100%
+
+//Slider beginning
+
+.slider-wrap
+	position: relative
+
+.slider
+	height: 494px
+	display: block
+	position: relative
+
+.shadow
+	background-image: url('../img/slider-shadow.png')
+	height: 580px
+	width: 1225px
+	margin: auto
+		top: -580px
+
+.slide-1
+	background-image: url('../img/slide-1-3.jpg')
+	height: 493px
+
+.slide-2
+	background-image: url('../img/slide-2-4.jpg')
+	height: 493px
+
+.slide-3
+	background-image: url('../img/slide-1-3.jpg')
+	height: 493px
+
+.slide-4
+	background-image: url('../img/slide-2-4.jpg')
+	height: 493px
+
+.slide-5
+	background-image: url('../img/slide-1-3.jpg')
+	height: 493px
+
+.slide-text
+	top: 318px
+	position: absolute
+	width: 760px
+	padding: 25px 0 0 10px
+	background-color: rgba(0,0,0,0.361)
+	z-index: 999999999999
+	h3
+		color: #fff
+		z-index: 9999999
+		margin: 0
+		padding: 0
+		font-family: EuropeExt, serif
+		text-transform: uppercase
+		font-size: 32px
+		max-width: 550px
+		line-height: 33px
+	p.description
+		color: #fff
+		text-transform: uppercase
+		padding: 0
+		margin: 0
+		font-family: EuropeExtBold, serif
+		font-size: 24px
+//Slider end
+//video-section beginning
+.video-section
+	width: 100%
+	height: 797px
+	background-image: url('../img/video-section-bg.png')
+	background-position: center
+	background-repeat: no-repeat
+	.content
+		display: block
+		.logo
+			width: 100%
+			padding-top: 69px
+			display: flex
+			justify-content: center
+		p.video-section-title
+			width: 980px
+			font-family: EuropeExtBold, sans-serif
+			font-size: 30px
+			color: #073d79
+			text-transform: uppercase
+			text-align: center
+			margin: 0
+		iframe
+			display: block
+			margin: 0 auto
+		.shadow-iframe
+			background-image: url('../img/shadow-iframe.png')
+			width: 980px
+			height: 70px
+			margin: auto
+				top: -20px
+		.description-iframe
+			width: 100%
+			font-family: Arial, sans-serif
+			font-size: 14px
+			color: #0a274d
+			text-align: center
+a.learn-more
+	font-family: EuropeExtBold, sans-serif
+	font-size: 24px
+	text-transform: uppercase
+	color: #fff
+	text-decoration: none
+	.button-learn-more
+		margin: 0 auto
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 400px
+		padding: 10px 0
+		background-color: #01983b
+		background-image: url('../img/pattern.png')
+		box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5)
+		border-radius: 3px
+		&:hover
+			background-color: #01aa42
+		&:active
+			background-color: #616161
+
+// Sphere of usage beginning
+
+.sphere-of-usage
+  height: 826px
+  width: 100%
+  background: url('../img/sphere-bg.png') no-repeat center
+  p.sphere-section-title
+	  text-align: center
+	  font-family: EuropeExtBold, sans-serif
+	  font-size: 30px
+	  color: #073d79
+	  text-transform: uppercase
+  .banners-space
+	  display: flex
+	  height: 307px
+	  width: 100%
+  .banner-left
+	  display: flex
+	  height: 307px
+	  width: 610px
+	  background: #000
+	  background-image: url('../img/left-banner-bg.png')
+	  justify-content: flex-start
+	  align-items: flex-start
+	  flex-direction: column
+
+.banner-right
+  display: flex
+  height: 307px
+  width: 610px
+  margin-left: 5px
+  background: #000
+  background-image: url('../img/right-banner-bg.png')
+  justify-content: flex-start
+  align-items: flex-start
+  flex-direction: column
+
+h1.title-sphere-left
+  font-family: Arial, sans-serif
+  font-size: 24px
+  color: #fff
+  text-transform: uppercase
+  font-weight: normal
+  padding-right: 45px
+
+h1.title-sphere-right
+  font-family: Arial, sans-serif
+  font-size: 24px
+  color: #fff
+  text-transform: uppercase
+  font-weight: normal
+  padding-left: 45px
+
+.aspect-right-side
+  padding: 0 45px
+  margin: 3px 0
+  background-color: #01983b
+  color: #fff
+  font-family: Arial, sans-serif
+  font-size: 14px
+  position: relative
+  text-transform: uppercase
+  &::before
+    position: absolute
+    background-color: rgba(1, 152, 59, 0.451)
+    content: ''
+    top: 0
+    bottom: 0
+    left: -47px
+    width: 47px
+    z-index: 3
+  &::after
+    position: absolute
+    background-color: rgba(1, 152, 59, 0.2)
+    content: ''
+    top: 0
+    bottom: 0
+    left: -95px
+    width: 95px
+    z-index: 3
+
+.aspect-left-side
+  padding: 0 45px
+  margin: 3px 0
+  background-color: #01983b
+  color: #fff
+  font-family: Arial, sans-serif
+  font-size: 14px
+  position: relative
+  text-transform: uppercase
+  &::before
+    position: absolute
+    background-color: rgba(1, 152, 59, 0.451)
+    content: ''
+    top: 0
+    bottom: 0
+    right: -47px
+    width: 47px
+    z-index: 3
+  &::after
+    position: absolute
+    background-color: rgba(1, 152, 59, 0.2)
+    content: ''
+    top: 0
+    bottom: 0
+    right: -95px
+    width: 95px
+    z-index: 3
+
+
+
+.title-banners-left
+  display: flex
+  width: 100%
+  justify-content: flex-end
+  height: 61px
+
+.title-banners-right
+  display: flex
+  width: 100%
+  justify-content: flex-start
+  height: 61px
+
+.aspects-banners-left
+	width: 100%
+	height: 223px
+	display: flex
+	justify-content: flex-start
+	flex-direction: column
+	align-items: flex-end
+
+.aspects-banners-right
+  width: 100%
+  height: 223px
+  display: flex
+  justify-content: flex-start
+  flex-direction: column
+  align-items: flex-start
+
+.banners-logo-bottom-left
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  height: 24px
+  width: 100%
+  padding-right: 50px
+  background-color: rgba(255, 255, 255, 0.2)
+
+.banners-logo-bottom-right
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	height: 24px
+	width: 100%
+	padding-left: 50px
+	background-color: rgba(255, 255, 255, 0.2)
+
+
+.rhombuses-space
+	width: 100%
+	padding: 50px 40px
+	display: flex
+
+
+.rhombus-image-title-space
+	height: 250px
+	width: 190px
+
+.single-rhombus
+	width: 190px
+	height: 190px
+	background-image: url('../img/rhombus-bg.png')
+	display: flex
+	justify-content: center
+	align-items: center
+
+.rhombus-text
+	font-family: Arial, sans-serif
+	font-size: 14px
+	font-weight: bold
+	color: #01983b
+	display: flex
+	align-items: center
+	text-align: center
+	justify-content: center
+	width: 190px
+	height: 60px
+	text-transform: uppercase
+	line-height: 1.143
+
+.rhombus-even
+	margin-top: 48px
+
+//	Table section beginning
+
+.table-section
+	height: 759px
+	width: 100%
+	background-image: url('../img/table-section-bg.png')
+	background-repeat: no-repeat
+	background-position: center
+	.table-big-bg
+		background-color: rgba(255,255,255, 0.6)
+		height: 759px
+		border: 3px solid #e6ecf4
+		border-radius: 3px
+
+.table-title
+	width: 100%
+	height: 150px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+.table-title-text
+	font-family: EuropeExtBold, sans-serif
+	font-size: 30px
+	color: #01983b
+	text-transform: uppercase
+
+.table-border-block
+	width: 100%
+	border: 3px solid #d5dfec
+	border-radius: 3px
+	table
+		width: 100%
+		border: 1px solid #d5dfec
+		th
+			border: 1px solid #d5dfec
+			text-align: center
+			background: #01983b
+			background-image: url('../img/pattern.png')
+			font-family: Arial, sans-serif
+			font-weight: bold
+			font-size: 14px
+			color: #fff
+			height: 38px
+		th:first-child,
+		td:first-child
+			text-align: left
+			padding-left: 12px
+			width: 365px
+		tr:nth-child(odd)
+			background-color: #fff
+		tr:nth-child(even)
+			background-color: #f2f5f7
+		td
+			font-family: Arial, sans-serif
+			font-size: 14px
+			color: #043567
+			border: 1px solid #d5dfec
+			height: 38px
+			text-align: center
+
+.shadow-table
+	height: 70px
+	background-image: url('../img/shadow-tech.png')
+	margin-top: -20px
+
+//	Tasks section beginning
+.tasks-section
+	min-height: 502px
+	width: 100%
+	background: url('../img/tasks-section-bg.png') no-repeat center
+
+.tasks
+	display: flex
+	flex-direction: column
+	.tasks-title
+		height: 105px
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		font-family: EuropeExtBold, sans-serif
+		font-size: 30px
+		text-transform: uppercase
+		color: #01983b
+.tasks-colors
+	width: 100%
+	table
+		td
+			font-family: Arial, sans-serif
+			font-size: 14px
+			color: #fff
+			vertical-align: top
+		tr:nth-child(even)
+			height: 5px
+		td:nth-child(1)
+			width: 365px
+			width: 365px
+			position: relative
+			background: rgb(255, 0, 0)
+			padding: 8px 58px
+			background-image: url('../img/sad-emoji.png')
+			background-position: 14px 4px
+			background-repeat: no-repeat
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				bottom: 0
+				left: -60px
+				background: rgba(255, 0, 0, 0.502)
+				width: 60px
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				bottom: 0
+				left: -120px
+				background: rgba(255, 0, 0, 0.251)
+				width: 120px
+		td:nth-child(2)
+			width: 9px
+		td:nth-child(3)
+			width: 601px
+			margin-left: 9px
+			position: relative
+			background: rgb(1, 152, 59)
+			padding: 8px 58px
+			background-image: url('../img/happy-emoji.png')
+			background-position: 14px 4px
+			background-repeat: no-repeat
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				bottom: 0
+				right: -60px
+				width: 60px
+				background: rgba(1, 152, 59, 0.502)
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				bottom: 0
+				right: -120px
+				width: 120px
+				background: rgba(1, 152, 59, 0.251)
+
+//Tasks section end
+//Certificates section beginning
+
+.certificates-section
+	height: 539px
+
+.certificates-title
+	height: 100px
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+
+.certificates-title-text
+	font-family: EuropeExtBold,sans-serif
+	font-size: 30px
+	color: #2c2783
+	text-transform: uppercase
+
+.certificates-items-space
+	height: 220px
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+
+
+ul.slider-certificates
+  display: flex
+  width: 980px
+  justify-content: space-between
+  .slick-prev::before,
+  .slick-next::before
+    color: #01983b
+  .slick-slide
+    img
+      height: 204px
+      width: 145px
+  .slick-track
+    width: 100%
+    display: flex
+    justify-content: space-between
+  .slick-list
+    width: 100%
+    display: flex
+    justify-content: space-between
+
+ul.slider-certificates > li
+  display: flex
+  img
+    height: 204px
+    width: 145px
+
+.best-goods
+  height: 219px
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+.best-goods-title
+  font-family: Arial, sans-serif
+  font-weight: bold
+  font-size: 24px
+  color: #2c2783
+  text-transform: uppercase
+  text-align: center
+  line-height: 24px
+
+//Certificates section end
+
+@import "media" // Всегда в конце
