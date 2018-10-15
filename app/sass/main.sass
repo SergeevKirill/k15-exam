@@ -74,13 +74,15 @@ header
 	background-image: url('../img/pattern.png')
 	height: 76px
 	width: 100%
+	display: flex
+	align-items: center
 
 .head
 	height: 76px
 
 .centered-content-980
-	width: 980px
-	margin: 0 auto
+  width: 980px
+  margin: 0 auto
 
 .centered-content-1225
 	width: 1225px
@@ -93,7 +95,7 @@ header
   align-items: center
   .menu-item
     display: flex
-    padding: 23px 0
+    padding: 1px 0
     a
       font-family: Arial, serif
       font-size: 16px
@@ -101,10 +103,18 @@ header
       text-decoration: none
       color: #fff
       &:hover
-        color: #2c2783
+        color: #fff
       &:active
-        color: #282828
+        color: #000
 
+.menu-item:hover
+	animation: top-menu 0.25s ease-in
+	animation-fill-mode: both
+
+.menu-item:focus
+	animation: none
+	border: 2px solid #000
+		  
 .menu-focus
   border-top: 2px solid #fff
   border-bottom: 2px solid #fff
@@ -283,9 +293,10 @@ header
 	background-repeat: no-repeat
 	.content
 		display: block
+		text-align: center
 		.logo
 			width: 100%
-			padding-top: 69px
+			padding-top: 49px
 			display: flex
 			justify-content: center
 		p.video-section-title
@@ -295,7 +306,7 @@ header
 			color: #073d79
 			text-transform: uppercase
 			text-align: center
-			margin: 0
+			margin: 10px 0 0 0
 		iframe
 			display: block
 			margin: 0 auto
@@ -312,26 +323,26 @@ header
 			color: #0a274d
 			text-align: center
 a.learn-more
-	font-family: EuropeExtBold, sans-serif
-	font-size: 24px
-	text-transform: uppercase
-	color: #fff
-	text-decoration: none
-	.button-learn-more
-		margin: 0 auto
-		display: flex
-		align-items: center
-		justify-content: center
-		width: 400px
-		padding: 10px 0
-		background-color: #01983b
-		background-image: url('../img/pattern.png')
-		box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5)
-		border-radius: 3px
-		&:hover
-			background-color: #01aa42
-		&:active
-			background-color: #616161
+  font-family: EuropeExtBold, sans-serif
+  font-size: 24px
+  text-transform: uppercase
+  color: #fff
+  text-decoration: none
+  .button-learn-more
+	  margin: 0 auto
+	  display: flex
+	  align-items: center
+	  justify-content: center
+	  width: 400px
+	  padding: 10px 0
+	  background-color: #01983b
+	  background-image: url('../img/pattern.png')
+	  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5)
+	  border-radius: 3px
+	  &:hover
+	  	background-color: #01aa42
+	  &:active
+	  	background-color: #616161
 
 // Sphere of usage beginning
 
@@ -497,9 +508,11 @@ h1.title-sphere-right
 	display: flex
 
 
+
 .rhombus-image-title-space
 	height: 250px
 	width: 190px
+
 
 .single-rhombus
 	width: 190px
@@ -519,12 +532,19 @@ h1.title-sphere-right
 	text-align: center
 	justify-content: center
 	width: 190px
-	height: 60px
+	margin-top: 20px
 	text-transform: uppercase
 	line-height: 1.143
+	span
+		max-width: 136px
+		line-height: 16px
 
 .rhombus-even
 	margin-top: 48px
+
+.last
+	span
+		max-width: 132px
 
 //	Table section beginning
 
@@ -612,69 +632,67 @@ h1.title-sphere-right
 		font-size: 30px
 		text-transform: uppercase
 		color: #01983b
-.tasks-colors
-	width: 100%
-	table
-		td
-			font-family: Arial, sans-serif
-			font-size: 14px
-			color: #fff
-			vertical-align: top
-		tr:nth-child(even)
-			height: 5px
-		td:nth-child(1)
-			width: 365px
-			width: 365px
-			position: relative
-			background: rgb(255, 0, 0)
-			padding: 8px 58px
-			background-image: url('../img/sad-emoji.png')
-			background-position: 14px 4px
-			background-repeat: no-repeat
-			&::before
-				content: ''
-				position: absolute
-				top: 0
-				bottom: 0
-				left: -60px
-				background: rgba(255, 0, 0, 0.502)
-				width: 60px
-			&::after
-				content: ''
-				position: absolute
-				top: 0
-				bottom: 0
-				left: -120px
-				background: rgba(255, 0, 0, 0.251)
-				width: 120px
-		td:nth-child(2)
-			width: 9px
-		td:nth-child(3)
-			width: 601px
-			margin-left: 9px
-			position: relative
-			background: rgb(1, 152, 59)
-			padding: 8px 58px
-			background-image: url('../img/happy-emoji.png')
-			background-position: 14px 4px
-			background-repeat: no-repeat
-			&::before
-				content: ''
-				position: absolute
-				top: 0
-				bottom: 0
-				right: -60px
-				width: 60px
-				background: rgba(1, 152, 59, 0.502)
-			&::after
-				content: ''
-				position: absolute
-				top: 0
-				bottom: 0
-				right: -120px
-				width: 120px
-				background: rgba(1, 152, 59, 0.251)
 
+.row:nth-child(1)
+	margin-top: 0
+
+.row
+	display: flex
+	justify-content: center
+	margin-top: 5px
+	.task
+		padding: 8px 10px 8px 68px
+		min-height: 40px
+		font-family: Arial, sans-serif
+		font-size: 14px
+		color: #fff
+	.task:nth-child(1)
+		margin-right: 9px
+		background: url('../img/sad-emoji.png')
+		background-position: 14px  6px
+		background-repeat: no-repeat
+		background-color: rgb(255, 0, 0)
+		width: 365px
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			left: -60px
+			background: rgba(255, 0, 0, 0.502)
+			width: 60px
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			left: -120px
+			background: rgba(255, 0, 0, 0.251)
+			width: 120px
+	.task:nth-child(2)
+		width: 601px
+		position: relative
+		background: url('../img/happy-emoji.png')
+		background-position: 14px  6px
+		background-repeat: no-repeat
+		background-color: rgb(1, 152, 59)
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			right: -60px
+			width: 60px
+			background: rgba(1, 152, 59, 0.502)
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			right: -120px
+			width: 120px
+			background: rgba(1, 152, 59, 0.251)
 //Tasks section end
 //Certificates section beginning
 
@@ -746,5 +764,136 @@ ul.slider-certificates > li
   line-height: 24px
 
 //Certificates section end
+//Contacts section beginning
+
+.contacts-section
+  width: 100%
+  height: 466px
+  padding-top: 35px
+  position: relative
+  display: flex
+  justify-content: center
+  .centered-content-contacts
+    width: 100%
+    position: absolute
+
+
+.contacts-banner
+  width: 980px
+  height: 196px
+  border-top: 3px solid #34ad62
+  background-color: #01983b
+  background-image: url('../img/pattern.png')
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5),inset 0 3px 0 0 rgba(255, 255, 255, 0.2)
+  border-radius: 0 0 10px 10px
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  text-align: center
+  .title-contacts
+    font-family: EuropeExtBold, sans-serif
+    font-size: 30px
+    text-transform: uppercase
+    color: #fff
+  .contacts-description
+    font-family: Arial, sans-serif
+    font-size: 18px
+    color: #fff
+  .contacts-info a
+    text-decoration: none
+    font-family: Arial, sans-serif
+    font-size: 14px
+    color: #fff
+
+.map
+  margin-top: 94px
+
+//Contacts section end
+//Footer beginning
+
+.footer-section
+  width: 100%
+  height: 313px
+  background-image: url('../img/footer-bg.png')
+
+.logo-footer
+	height: 104px
+	padding-top: 26px
+	display: flex
+	justify-content: center
+	span
+		display: block
+
+.footer-copy
+	height: 19px
+	display: flex
+	justify-content: center
+	align-items: center
+	font-family: Arial, sans-serif
+	font-size: 12px
+	color: #fff
+
+.footer-social-media
+	height: 68px
+	display: flex
+	justify-content: center
+	padding: 10px 0
+	flex-direction: column
+	text-align: center
+	.footer-text-social-media
+		font-family: Arial, sans-serif
+		font-size: 12px
+		color: #fff
+	.footer-social-media-socials
+		margin: 0 auto
+
+		.vk-footer
+			display: inline-block
+			height: 32px
+			width: 33px
+			background: url('../img/vk-footer-sprite.png')
+			background-position: -1px -1px
+			&:hover
+				background-position: -35px -1px
+			&:active
+				background-position: -69px -1px
+		.in-footer
+			display: inline-block
+			height: 32px
+			width: 33px
+			background: url('../img/in-footer-sprite.png')
+			background-position: -1px -1px
+			&:hover
+				background-position: -35px -1px
+			&:active
+				background-position: -69px -1px
+
+.development-wezom
+	height: 122px
+	padding-bottom: 20px
+	display: flex
+	justify-content: center
+	align-items: flex-end
+	a
+		font-family: Arial, sans-serif
+		font-size: 12px
+		color: #fff
+		text-transform: uppercase
+		&:active
+			color: #d0d0d0
+
+
+@keyframes top-menu
+	0%
+		border-top: 2px solid #fff
+		border-bottom: 2px solid #fff
+		padding: 25px 0
+	100%
+		padding: 0 0
+		border-top: 2px solid #fff
+		border-bottom: 2px solid #fff
+
+
 
 @import "media" // Всегда в конце
