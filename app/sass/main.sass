@@ -69,6 +69,16 @@ body
 	background-color: $accent
 	color: #fff
 
+::-webkit-scrollbar
+	width: 10px
+
+::-webkit-scrollbar-thumb
+	background: #01983b
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5)
+
+::-webkit-scrollbar-track
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+
 header
 	background-color: #01983b
 	background-image: url('../img/pattern.png')
@@ -81,49 +91,44 @@ header
 	height: 76px
 
 .centered-content-980
-  width: 980px
-  margin: 0 auto
+	width: 980px
+	margin: 0 auto
 
 .centered-content-1225
 	width: 1225px
 	margin: 0 auto
 
 .menu
-  width: 100%
-  display: flex
-  justify-content: space-between
-  align-items: center
-  .menu-item
-    display: flex
-    padding: 1px 0
-    a
-      font-family: Arial, serif
-      font-size: 16px
-      text-transform: uppercase
-      text-decoration: none
-      color: #fff
-      &:hover
-        color: #fff
-      &:active
-        color: #000
+	width: 100%
+	display: flex
+	justify-content: space-between
+	align-items: center
+	.menu-item
+		display: flex
+		padding: 1px 2px
+		a
+			font-family: Arial, serif
+			font-size: 16px
+			text-transform: uppercase
+			text-decoration: none
+			color: #fff
+			&:active
+				color: #000
 
 .menu-item:hover
-	animation: top-menu 0.25s ease-in
-	animation-fill-mode: both
+	background-color: #fff
+	a
+		color: #01983b
 
-.menu-item:focus
-	animation: none
-	border: 2px solid #000
-		  
 .menu-focus
-  border-top: 2px solid #fff
-  border-bottom: 2px solid #fff
-  &:hover
-    border-top: 2px solid #2c2783
-    border-bottom: 2px solid #2c2783
-  &:active
-    border-top: 2px solid #282828
-    border-bottom: 2px solid #282828
+	border-top: 2px solid #fff
+	border-bottom: 2px solid #fff
+	&:hover
+		border-top: 2px solid #01983b
+		border-bottom: 2px solid #01983b
+	&:active
+		border-top: 2px solid #282828
+		border-bottom: 2px solid #282828
 
 .slider-section
 	width: 100%
@@ -192,6 +197,8 @@ header
 			width: 420px
 			height: 84px
 			a
+				font-family: Arial, sans-serif
+				font-weight: bold
 				text-decoration: none
 				font-size: 16px
 				color: #2c2783
@@ -227,6 +234,7 @@ header
 .slider-wrap
 	position: relative
 
+
 .slider
 	height: 494px
 	display: block
@@ -234,6 +242,7 @@ header
 
 .shadow
 	background-image: url('../img/slider-shadow.png')
+	background-position: center
 	height: 580px
 	width: 1225px
 	margin: auto
@@ -287,6 +296,7 @@ header
 //video-section beginning
 .video-section
 	width: 100%
+	padding-top: 20px
 	height: 797px
 	background-image: url('../img/video-section-bg.png')
 	background-position: center
@@ -323,149 +333,149 @@ header
 			color: #0a274d
 			text-align: center
 a.learn-more
-  font-family: EuropeExtBold, sans-serif
-  font-size: 24px
-  text-transform: uppercase
-  color: #fff
-  text-decoration: none
-  .button-learn-more
-	  margin: 0 auto
-	  display: flex
-	  align-items: center
-	  justify-content: center
-	  width: 400px
-	  padding: 10px 0
-	  background-color: #01983b
-	  background-image: url('../img/pattern.png')
-	  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5)
-	  border-radius: 3px
-	  &:hover
-	  	background-color: #01aa42
-	  &:active
-	  	background-color: #616161
+	font-family: EuropeExtBold, sans-serif
+	font-size: 24px
+	text-transform: uppercase
+	color: #fff
+	text-decoration: none
+	.button-learn-more
+		margin: 0 auto
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 400px
+		padding: 10px 0
+		background-color: #01983b
+		background-image: url('../img/pattern.png')
+		box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5)
+		border-radius: 3px
+		&:hover
+			background-color: #01aa42
+		&:active
+			background-color: #616161
 
 // Sphere of usage beginning
 
 .sphere-of-usage
-  height: 826px
-  width: 100%
-  background: url('../img/sphere-bg.png') no-repeat center
-  p.sphere-section-title
-	  text-align: center
-	  font-family: EuropeExtBold, sans-serif
-	  font-size: 30px
-	  color: #073d79
-	  text-transform: uppercase
-  .banners-space
-	  display: flex
-	  height: 307px
-	  width: 100%
-  .banner-left
-	  display: flex
-	  height: 307px
-	  width: 610px
-	  background: #000
-	  background-image: url('../img/left-banner-bg.png')
-	  justify-content: flex-start
-	  align-items: flex-start
-	  flex-direction: column
+	min-height: 826px
+	width: 100%
+	background: url('../img/sphere-bg.png') no-repeat center
+	p.sphere-section-title
+		text-align: center
+		font-family: EuropeExtBold, sans-serif
+		font-size: 30px
+		color: #073d79
+		text-transform: uppercase
+	.banners-space
+		display: flex
+		height: 307px
+		width: 100%
+	.banner-left
+		display: flex
+		height: 307px
+		width: 610px
+		background: #000
+		background-image: url('../img/left-banner-bg.png')
+		justify-content: flex-start
+		align-items: flex-start
+		flex-direction: column
 
 .banner-right
-  display: flex
-  height: 307px
-  width: 610px
-  margin-left: 5px
-  background: #000
-  background-image: url('../img/right-banner-bg.png')
-  justify-content: flex-start
-  align-items: flex-start
-  flex-direction: column
+	display: flex
+	height: 307px
+	width: 610px
+	margin-left: 5px
+	background: #000
+	background-image: url('../img/right-banner-bg.png')
+	justify-content: flex-start
+	align-items: flex-start
+	flex-direction: column
 
 h1.title-sphere-left
-  font-family: Arial, sans-serif
-  font-size: 24px
-  color: #fff
-  text-transform: uppercase
-  font-weight: normal
-  padding-right: 45px
+	font-family: Arial, sans-serif
+	font-size: 24px
+	color: #fff
+	text-transform: uppercase
+	font-weight: normal
+	padding-right: 45px
 
 h1.title-sphere-right
-  font-family: Arial, sans-serif
-  font-size: 24px
-  color: #fff
-  text-transform: uppercase
-  font-weight: normal
-  padding-left: 45px
+	font-family: Arial, sans-serif
+	font-size: 24px
+	color: #fff
+	text-transform: uppercase
+	font-weight: normal
+	padding-left: 45px
 
 .aspect-right-side
-  padding: 0 45px
-  margin: 3px 0
-  background-color: #01983b
-  color: #fff
-  font-family: Arial, sans-serif
-  font-size: 14px
-  position: relative
-  text-transform: uppercase
-  &::before
-    position: absolute
-    background-color: rgba(1, 152, 59, 0.451)
-    content: ''
-    top: 0
-    bottom: 0
-    left: -47px
-    width: 47px
-    z-index: 3
-  &::after
-    position: absolute
-    background-color: rgba(1, 152, 59, 0.2)
-    content: ''
-    top: 0
-    bottom: 0
-    left: -95px
-    width: 95px
-    z-index: 3
+	padding: 0 45px
+	margin: 3px 0
+	background-color: #01983b
+	color: #fff
+	font-family: Arial, sans-serif
+	font-size: 14px
+	position: relative
+	text-transform: uppercase
+	&::before
+		position: absolute
+		background-color: rgba(1, 152, 59, 0.451)
+		content: ''
+		top: 0
+		bottom: 0
+		left: -47px
+		width: 47px
+		z-index: 3
+	&::after
+		position: absolute
+		background-color: rgba(1, 152, 59, 0.2)
+		content: ''
+		top: 0
+		bottom: 0
+		left: -95px
+		width: 95px
+		z-index: 3
 
 .aspect-left-side
-  padding: 0 45px
-  margin: 3px 0
-  background-color: #01983b
-  color: #fff
-  font-family: Arial, sans-serif
-  font-size: 14px
-  position: relative
-  text-transform: uppercase
-  &::before
-    position: absolute
-    background-color: rgba(1, 152, 59, 0.451)
-    content: ''
-    top: 0
-    bottom: 0
-    right: -47px
-    width: 47px
-    z-index: 3
-  &::after
-    position: absolute
-    background-color: rgba(1, 152, 59, 0.2)
-    content: ''
-    top: 0
-    bottom: 0
-    right: -95px
-    width: 95px
-    z-index: 3
+	padding: 0 45px
+	margin: 3px 0
+	background-color: #01983b
+	color: #fff
+	font-family: Arial, sans-serif
+	font-size: 14px
+	position: relative
+	text-transform: uppercase
+	&::before
+		position: absolute
+		background-color: rgba(1, 152, 59, 0.451)
+		content: ''
+		top: 0
+		bottom: 0
+		right: -47px
+		width: 47px
+		z-index: 3
+	&::after
+		position: absolute
+		background-color: rgba(1, 152, 59, 0.2)
+		content: ''
+		top: 0
+		bottom: 0
+		right: -95px
+		width: 95px
+		z-index: 3
 
 
 
 .title-banners-left
-  display: flex
-  width: 100%
-  justify-content: flex-end
-  height: 61px
+	display: flex
+	width: 100%
+	justify-content: flex-end
+	height: 61px
 
 .title-banners-right
-  display: flex
-  width: 100%
-  justify-content: flex-start
-  height: 61px
+	display: flex
+	width: 100%
+	justify-content: flex-start
+	height: 61px
 
 .aspects-banners-left
 	width: 100%
@@ -476,21 +486,21 @@ h1.title-sphere-right
 	align-items: flex-end
 
 .aspects-banners-right
-  width: 100%
-  height: 223px
-  display: flex
-  justify-content: flex-start
-  flex-direction: column
-  align-items: flex-start
+	width: 100%
+	height: 223px
+	display: flex
+	justify-content: flex-start
+	flex-direction: column
+	align-items: flex-start
 
 .banners-logo-bottom-left
-  display: flex
-  justify-content: flex-end
-  align-items: center
-  height: 24px
-  width: 100%
-  padding-right: 50px
-  background-color: rgba(255, 255, 255, 0.2)
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	height: 24px
+	width: 100%
+	padding-right: 50px
+	background-color: rgba(255, 255, 255, 0.2)
 
 .banners-logo-bottom-right
 	display: flex
@@ -506,8 +516,11 @@ h1.title-sphere-right
 	width: 100%
 	padding: 50px 40px
 	display: flex
+	align-items: center
+	justify-content: center
 
-
+.triple-rhombus-980
+	display: flex
 
 .rhombus-image-title-space
 	height: 250px
@@ -721,101 +734,101 @@ h1.title-sphere-right
 
 
 ul.slider-certificates
-  display: flex
-  width: 980px
-  justify-content: space-between
-  .slick-prev::before,
-  .slick-next::before
-    color: #01983b
-  .slick-slide
-    img
-      height: 204px
-      width: 145px
-  .slick-track
-    width: 100%
-    display: flex
-    justify-content: space-between
-  .slick-list
-    width: 100%
-    display: flex
-    justify-content: space-between
+	display: flex
+	width: 980px
+	justify-content: space-between
+	.slick-prev::before,
+	.slick-next::before
+		color: #01983b
+	.slick-slide
+		img
+			height: 204px
+			width: 145px
+	.slick-track
+		width: 100%
+		display: flex
+		justify-content: space-between
+	.slick-list
+		width: 100%
+		display: flex
+		justify-content: space-between
 
 ul.slider-certificates > li
-  display: flex
-  img
-    height: 204px
-    width: 145px
+	display: flex
+	img
+		height: 204px
+		width: 145px
 
 .best-goods
-  height: 219px
-  width: 100%
-  display: flex
-  justify-content: center
-  align-items: center
-  flex-direction: column
+	height: 219px
+	width: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
 
 .best-goods-title
-  font-family: Arial, sans-serif
-  font-weight: bold
-  font-size: 24px
-  color: #2c2783
-  text-transform: uppercase
-  text-align: center
-  line-height: 24px
+	font-family: Arial, sans-serif
+	font-weight: bold
+	font-size: 24px
+	color: #2c2783
+	text-transform: uppercase
+	text-align: center
+	line-height: 24px
 
 //Certificates section end
 //Contacts section beginning
 
 .contacts-section
-  width: 100%
-  height: 466px
-  padding-top: 35px
-  position: relative
-  display: flex
-  justify-content: center
-  .centered-content-contacts
-    width: 100%
-    position: absolute
+	width: 100%
+	height: 466px
+	padding-top: 35px
+	position: relative
+	display: flex
+	justify-content: center
+	.centered-content-contacts
+		width: 100%
+		position: absolute
 
 
 .contacts-banner
-  width: 980px
-  height: 196px
-  border-top: 3px solid #34ad62
-  background-color: #01983b
-  background-image: url('../img/pattern.png')
-  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5),inset 0 3px 0 0 rgba(255, 255, 255, 0.2)
-  border-radius: 0 0 10px 10px
-  display: flex
-  justify-content: center
-  align-items: center
-  flex-direction: column
-  text-align: center
-  .title-contacts
-    font-family: EuropeExtBold, sans-serif
-    font-size: 30px
-    text-transform: uppercase
-    color: #fff
-  .contacts-description
-    font-family: Arial, sans-serif
-    font-size: 18px
-    color: #fff
-  .contacts-info a
-    text-decoration: none
-    font-family: Arial, sans-serif
-    font-size: 14px
-    color: #fff
+	width: 980px
+	height: 196px
+	border-top: 3px solid #34ad62
+	background-color: #01983b
+	background-image: url('../img/pattern.png')
+	box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5),inset 0 3px 0 0 rgba(255, 255, 255, 0.2)
+	border-radius: 0 0 10px 10px
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	text-align: center
+	.title-contacts
+		font-family: EuropeExtBold, sans-serif
+		font-size: 30px
+		text-transform: uppercase
+		color: #fff
+	.contacts-description
+		font-family: Arial, sans-serif
+		font-size: 18px
+		color: #fff
+	.contacts-info a
+		text-decoration: none
+		font-family: Arial, sans-serif
+		font-size: 14px
+		color: #fff
 
 .map
-  margin-top: 94px
+	margin-top: 94px
 
 //Contacts section end
 //Footer beginning
 
 .footer-section
-  width: 100%
-  height: 313px
-  background-image: url('../img/footer-bg.png')
+	width: 100%
+	height: 313px
+	background-image: url('../img/footer-bg.png')
 
 .logo-footer
 	height: 104px
@@ -883,17 +896,28 @@ ul.slider-certificates > li
 		&:active
 			color: #d0d0d0
 
+@media screen and (max-width: 980px)
+	.centered-content-1225
+		width: 980px
 
-@keyframes top-menu
-	0%
-		border-top: 2px solid #fff
-		border-bottom: 2px solid #fff
-		padding: 25px 0
-	100%
-		padding: 0 0
-		border-top: 2px solid #fff
-		border-bottom: 2px solid #fff
+	.task
+		&::before,
+		&::after
+			display: none
 
+	.banner-right,
+	.banner-left
+		overflow: hidden
 
+	.shadow, .shadow-table, .shadow-iframe
+		background-position: center
+		width: 100%
+
+	.rhombuses-space
+		flex-direction: column
+
+	.slick-next,
+	.slick-prev
+		display: none
 
 @import "media" // Всегда в конце
