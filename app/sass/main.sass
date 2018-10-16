@@ -69,6 +69,16 @@ body
 	background-color: $accent
 	color: #fff
 
+::-webkit-scrollbar
+	width: 10px
+
+::-webkit-scrollbar-thumb
+	background: #01983b
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5)
+
+::-webkit-scrollbar-track
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+
 header
 	background-color: #01983b
 	background-image: url('../img/pattern.png')
@@ -95,7 +105,7 @@ header
   align-items: center
   .menu-item
     display: flex
-    padding: 1px 0
+    padding: 1px 2px
     a
       font-family: Arial, serif
       font-size: 16px
@@ -103,24 +113,16 @@ header
       text-decoration: none
       color: #fff
       &:hover
-        color: #fff
+        color: #dedfde
       &:active
         color: #000
-
-.menu-item:hover
-	animation: top-menu 0.25s ease-in
-	animation-fill-mode: both
-
-.menu-item:focus
-	animation: none
-	border: 2px solid #000
 		  
 .menu-focus
   border-top: 2px solid #fff
   border-bottom: 2px solid #fff
   &:hover
-    border-top: 2px solid #2c2783
-    border-bottom: 2px solid #2c2783
+    border-top: 2px solid #dedfde
+    border-bottom: 2px solid #dedfde
   &:active
     border-top: 2px solid #282828
     border-bottom: 2px solid #282828
@@ -192,6 +194,8 @@ header
 			width: 420px
 			height: 84px
 			a
+				font-family: Arial, sans-serif
+				font-weight: bold
 				text-decoration: none
 				font-size: 16px
 				color: #2c2783
@@ -226,6 +230,17 @@ header
 
 .slider-wrap
 	position: relative
+	.slick-prev::before
+		color: rgba(0,0,0,0)
+		background-color: red
+		background: url('../img/slider-arrow-prev.png')
+		background-repeat: no-repeat
+	.slick-next::before
+		color: rgba(0,0,0,0)
+		background-color: red
+		background: url('../img/slider-arrow-next.png')
+		background-repeat: no-repeat
+
 
 .slider
 	height: 494px
@@ -234,6 +249,7 @@ header
 
 .shadow
 	background-image: url('../img/slider-shadow.png')
+	background-position: center
 	height: 580px
 	width: 1225px
 	margin: auto
@@ -287,6 +303,7 @@ header
 //video-section beginning
 .video-section
 	width: 100%
+	padding-top: 20px
 	height: 797px
 	background-image: url('../img/video-section-bg.png')
 	background-position: center
@@ -347,7 +364,7 @@ a.learn-more
 // Sphere of usage beginning
 
 .sphere-of-usage
-  height: 826px
+  min-height: 826px
   width: 100%
   background: url('../img/sphere-bg.png') no-repeat center
   p.sphere-section-title
@@ -506,8 +523,11 @@ h1.title-sphere-right
 	width: 100%
 	padding: 50px 40px
 	display: flex
+	align-items: center
+	justify-content: center
 
-
+.triple-rhombus-980
+	display: flex
 
 .rhombus-image-title-space
 	height: 250px
@@ -883,17 +903,28 @@ ul.slider-certificates > li
 		&:active
 			color: #d0d0d0
 
+@media screen and (max-width: 980px)
+	.centered-content-1225
+		width: 980px
 
-@keyframes top-menu
-	0%
-		border-top: 2px solid #fff
-		border-bottom: 2px solid #fff
-		padding: 25px 0
-	100%
-		padding: 0 0
-		border-top: 2px solid #fff
-		border-bottom: 2px solid #fff
+	.task
+		&::before,
+		&::after
+			display: none
 
+	.banner-right,
+	.banner-left
+		overflow: hidden
 
+	.shadow, .shadow-table, .shadow-iframe
+		background-position: center
+		width: 100%
+
+	.rhombuses-space
+		flex-direction: column
+
+	.slick-next,
+	.slick-prev
+		display: none
 
 @import "media" // Всегда в конце
